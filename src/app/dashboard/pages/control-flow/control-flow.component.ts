@@ -1,21 +1,27 @@
-import { CommonModule } from '@angular/common';
 import { Component, signal } from '@angular/core';
 
+type Grade = 'A'|'B'|'F';
 
-type Grade= 'A'|'B'|'F'
+
+
 @Component({
   standalone: true,
-  imports: [CommonModule],
+  imports: [],
   templateUrl: './control-flow.component.html',
   styles: ``
 })
 export default class ControlFlowComponent {
-public showContent = signal(false);
-public grade = signal<Grade>('A');
+  public showContent = signal(false);
+  public grade = signal<Grade>('A');
 
-public toggleContent(){
-  this.showContent.update( value => !value);
+  public frameworks = signal(['Angular','Vue','Svelte','Qwik','React']);
+  public frameworks2 = signal([]);
 
 
-}
+
+  public toggleContent() {
+    this.showContent.update( value => !value );
+
+  }
+
 }
