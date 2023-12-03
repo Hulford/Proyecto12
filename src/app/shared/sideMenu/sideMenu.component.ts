@@ -1,18 +1,18 @@
-import { Component, OnInit } from '@angular/core';
-import { routes } from '../../app.routes';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
+import { routes } from '../../app.routes';
+
+
 @Component({
-  selector: 'app-sideMenu',
-  standalone:true,
-  imports:[
-CommonModule,RouterModule
-  ],
-  templateUrl: './sideMenu.component.html',
-  styleUrls: ['./sideMenu.component.css']
+  selector: 'app-sidemenu',
+  standalone: true,
+  imports: [CommonModule, RouterModule],
+  templateUrl: './sidemenu.component.html',
+  styleUrl: './sidemenu.component.css',
 })
-export class SideMenuComponent  {
+export class SidemenuComponent {
 
   public menuItems = routes
     .map((route) => route.children ?? [])
