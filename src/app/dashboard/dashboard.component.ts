@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { SidemenuComponent } from '@shared/sideMenu/sidemenu.component';
 
 
+import { SidemenuComponent } from '@shared/sidemenu/sidemenu.component';
 
 
 
