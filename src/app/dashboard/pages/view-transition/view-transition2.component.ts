@@ -1,17 +1,17 @@
-import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { TitleComponent } from '@shared/title/title.component';
 
 @Component({
   standalone: true,
-  imports: [CommonModule,TitleComponent],
+  imports: [CommonModule, TitleComponent],
   template: `
 
-  <app-title title="View Transition 2" />
+    <app-title title="View Transition 2" />
 
-<section class="flex justify-start">
+    <section class="flex justify-end">
 
-<img
+      <img
         srcset="https://picsum.photos/id/237/200/300"
         alt="Picsum"
         width="200"
@@ -20,13 +20,15 @@ import { TitleComponent } from '@shared/title/title.component';
       />
 
       <div
-        class="bg-blue-500 w-56 h-56"
+        class="fixed bottom-16 right-10 bg-blue-800 w-32 h-32 rounded"
         style="view-transition-name: hero2"
       ></div>
 
 
-</section>
+    </section>
+
   `
+
 })
 export default class ViewTransitionComponent {
 
